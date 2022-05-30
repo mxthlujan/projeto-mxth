@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Construtoras e Prototype no JS</title>
+</head>
+<body>
+    <h1>Funções Construtoras e Prototype no JS</h1>
+	<hr>
+	<p>Conceitos de Orientação a Objetos no JavaScript</p>
+	<p>Referência: <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS" target="_blank">Funções construtoras e Prototype JS</a></p>
+
+<script>
+
+/* Função Construtora ou Protótipo */
+function Pessoa(nome, idade){
+    /* this: uma variável especial
+    que aponta para o próprio que está
+    sendo utilizado */
+    this.nome = nome;
+    this.idade = idade;
+    this.cidade = "São Paulo"   
+}
+/*  Instanciação (criando um objeto a partir 
+do protótipo Pessoa) */
+let pessoaA = new Pessoa("Matheus", 21);
+console.log(pessoaA);
+
+let pessoaB = new Pessoa("Marcelo", 35);
+console.log(pessoaB);
+
+
+/* Herança */
+function Aluno(nome, idade, matricula){
+    Pessoa.call(this, nome, idade);
+    this.matricula = matricula;
+}
+
+function Professor(nome, idade, area){
+    Pessoa.call(this, nome, idade);
+    this.area = area;
+}
+
+let aluno1 = new Aluno("Pedro", 27, "325fgc");
+console.log(aluno1);
+
+let professor1 = new Professor("Thony", 42, "Design");
+console.log(professor1);
+
+
+</script>    
+
+</body>
+</html>

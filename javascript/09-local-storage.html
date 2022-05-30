@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript - Dados offline com localStorage</title>
+</head>
+<body>
+    <h1>Dados Offline</h1>
+    <p>Usando <b>localStorage</b> para salvar dados em formato de <b>string</b> localmente no navegador.</p>
+    <hr>
+
+    <h2>Olá!</h2>
+
+    <form action="" method="post">
+        <p>
+            <label for="nome">Qual seu nome?</label>
+            <input type="text" id="nome" name="nome" required>
+            <button>Ok</button>
+        </p>        
+    </form>
+
+    <button id="limpar">Limpar localStorage</button>
+
+    <hr>
+    <h2>Referências</h2>
+    <ul>
+        <li><a href="https://tableless.com.br/guia-f%C3%A1cil-sobre-usar-localstorage-com-javascript/" target="_blank">Guia fácil para usar localStorage com Javascript</a></li>
+        <li><a href="https://zenorocha.com/html5-local-storage/" target="_blank">HTML5 - Local Storage</a></li>
+    </ul>
+
+<script>
+const subtitulo = document.querySelector("h2");
+const formulario = document.querySelector("form");
+const inputNome = document.querySelector("#nome");
+const botaoLimpar = document.querySelector("#limpar");
+
+/* Etapa 1: verificando se há dados no localStorage */
+if( localStorage.getItem("usuario") ){
+   console.log("Tem dados!");
+   subtitulo.innerHTML = `Olá ${localStorage.getItem("usuario")}`;  
+   formulario.style.display = "none";
+} else {
+    console.log("Não tem dados!");
+    formulario.style.display = "block";
+}
+
+/* Etapa 2: salvando os dados no localStorage */
+formulario.addEventListener("submit", function(event){
+    event.preventDefault();
+    let nome = inputNome.value;
+    console.log(nome);
+
+    // Criando e salvando no localStorage
+    localStorage.setItem("usuario", nome);
+
+    subtitulo.innerHTML = `Olá ${localStorage.getItem("usuario")}`;
+    formulario.style.display = "nome";
+});
+
+/* Etapa 3: limpar o localStorage */
+botaoLimpar.addEventListener("click", function(){
+   localStorage.removeItem("usuario");
+   
+   // Recarregamento da página
+   window.location = window.location;
+
+});
+
+
+</script>
+
+</body>
+</html>

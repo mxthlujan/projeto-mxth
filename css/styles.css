@@ -1,0 +1,77 @@
+*{ box-sizing: border-box; }
+
+body {
+  background-color: beige;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0; /* reset */
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  margin: 0; /* reset */
+  padding-left: 10px;
+}
+
+#imagem-decorativa {
+  background-image: url(../imagens/teclado.jpg);
+  height: 450px;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+
+
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  footer {
+    height: 150px;
+    background: cornflowerblue;
+    background: linear-gradient(rgb(58, 0, 216), cornflowerblue);
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    color:black;
+
+    clear: both; /* Resolver efeito do float no rodapé */
+  }
+
+/* DIV que envolve as seções */ 
+.treinamentos {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* quebra do flex */
+}
+
+/* Seções "filhas" da div de treinamentos */
+.treinamentos section {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: black 1px 1px 10px;
+}
+
+.flutuar-esquerda {
+  width: 250px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding-top: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .treinamentos { flex-direction: column;}
+  .treinamentos section {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+}

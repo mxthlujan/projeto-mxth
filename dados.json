@@ -1,0 +1,58 @@
+{
+  "vagas": [
+    {
+      "id": 1,
+      "titulo": "Programador Java Pleno"
+    },
+    {
+      "id": 2,
+      "titulo": "Analista Comercial"
+    },
+    {
+      "id": 3,
+      "titulo": "Instrutor Excel Avançado"
+    },
+    {
+      "id": 4,
+      "titulo": "Gerente de Projetos para .NET"
+    },
+    {
+      "id": 5,
+      "titulo": "Consultor de Desenvolvimento Agil"
+    },
+    {
+      "id": 6,
+      "titulo": "Programador VB.Net"
+    },
+    {
+      "id": 7,
+      "titulo": "Desenvolvedor Front-End"
+    }
+  ],
+  "candidatos": [
+    {
+      "nome": "José",
+      "data": "2000-10-10",
+      "telefone": "11 2222 3333",
+      "email": "jose@gmail.com",
+      "vaga": "Programador Java Pleno",
+      "id": 1
+    },
+    {
+      "nome": "Matheus ",
+      "data": "1970-05-23",
+      "telefone": "11 2222 3333",
+      "email": "matheus.org@hotmail.com",
+      "vaga": "Desenvolvedor Front-End",
+      "id": 3
+    },
+    {
+      "nome": "Tommy",
+      "data": "1978-08-27",
+      "telefone": "11 2222 3333",
+      "email": "tommy@gmail.com",
+      "vaga": "Analista Comercial",
+      "id": 4
+    }
+  ]
+}
